@@ -17,12 +17,12 @@ jobs:
     - name: Check go version
       run: |
         go version
-      
     - name: Install dependencies
       run: |
         go get github.com/tebeka/go2xunit
     - if: ${{success()}}
       name: Install goblin
+      run: |
         go get github.com/franela/goblin
     - if: ${{success()}}
       name: Test goblin
